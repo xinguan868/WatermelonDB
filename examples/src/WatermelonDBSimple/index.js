@@ -8,6 +8,8 @@ import {
   StyleSheet,
   Text,
   View,
+  Button, 
+  TextInput 
 } from 'react-native';
 import { Database } from '@react-native-ohos/watermelondb';
 import SQLiteAdapter from '@react-native-ohos/watermelondb/adapters/sqlite';
@@ -121,7 +123,7 @@ const MovieCard = ({ movie, onAddReview, onRename, onDelete }) => {
     }, [movie]);
   
     const info = movieInfo;
-
+    
   return (
     <View style={styles.card}>
       <Text style={styles.movieTitle}>{info.title}</Text>
@@ -142,6 +144,7 @@ const MovieCard = ({ movie, onAddReview, onRename, onDelete }) => {
         <ActionButton label="随机改名" type="secondary" onPress={() => onRename(movie)} />
         <ActionButton label="删除影片" type="danger" onPress={() => onDelete(movie)} />
       </View>
+      
     </View>
   );
 };
@@ -301,11 +304,22 @@ export default function WatermelonDemo() {
   return (
     <DatabaseProvider database={database}>
       <MovieScreen />
+      
     </DatabaseProvider>
   );
 }
 
 const styles = StyleSheet.create({
+  input: {
+    marginTop: 30,
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 6,
+    color: '#ccc',
+    paddingHorizontal: 10,
+    marginBottom: 10,
+  },
   container: {
     flex: 1,
     backgroundColor: '#0b132b',
