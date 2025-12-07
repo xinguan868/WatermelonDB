@@ -16,7 +16,7 @@
   "dependencies": {
     "@gorhom/portal": "^1.0.14",
     "@nozbe/watermelondb": "^0.28.0",
-    "@react-native-oh/react-native-harmony": "0.72.96",    
+    "@react-native-oh/react-native-harmony": "0.72.96",
     "@react-native-ohos/watermelondb": "file:../dist/react-native-ohos-watermelondb-0.28.1-test-5.tgz",
     "@reduxjs/toolkit": "1.5.1",
     "react": "18.2.0",
