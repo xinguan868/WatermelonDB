@@ -41,7 +41,7 @@ export default class LocalStorage {
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description
   async set<ValueType>(key: LocalStorageKey<ValueType>, value: ValueType): Promise<void> {
     const json = JSON.stringify(value)
-    invariant(typeof json === 'string', 'Value not JSON-serializable')
+    invariant(typeof json === 'string', 'Value not JSON-serializable') // 验证第一个形参是否为真，否则抛出第二个形参的错误信息
     return this._db.adapter.setLocal(key, json)
   }
 
